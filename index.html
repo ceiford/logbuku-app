@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logbuku + GitHub</title>
+    <!-- html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- CSS terpisah -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>✋Halo Zan<span>📘 Logbuku</span></h1>
+
+    <div class="header-today" id="todayHeader"></div>
+
+    <div class="form-section">
+        <h3>➕ Tambah catatan baru</h3>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>📸 Foto (maks 10MB)</label>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label>📚 Mata Kuliah</label>
+                <input type="text" id="matkulInput" placeholder="Misal: Pemrograman Web" list="matkulSuggest">
+                <datalist id="matkulSuggest"></datalist>
+            </div>
+            <div class="form-group full-width">
+                <label>📝 Catatan</label>
+                <input type="text" id="description" placeholder="Apa yang dikerjakan...">
+            </div>
+        </div>
+        <button class="btn" id="submitBtn" style="margin-top: 0.8rem;">✓ Simpan ke Logbook</button>
+    </div>
+
+    <div class="filter-bar">
+        <div class="entries-title">
+            <h2>📋 Arsip logbook</h2>
+        </div>
+        <div class="filter-group">
+            <label for="filterMatkul">Filter :</label>
+            <select id="filterMatkul">
+                <option value="SEMUA">Semua Mata Kuliah</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="entriesContainer" class="log-list"></div>
+
+    <div class="footer-actions">
+        <button class="btn btn-secondary" id="exportPdfBtn">📄 Ekspor ke PDF</button>
+    </div>
+
+    <div class="backup-section">
+        <button class="btn btn-secondary" id="backupBtn">💾 Backup ke File (JSON)</button>
+        <input type="file" id="restoreFile" accept=".json" style="display:none;">
+        <button class="btn btn-secondary" id="restoreBtn">📂 Pulihkan dari File</button>
+    </div>
+
+    <hr>
+    <div style="text-align: right; color: #5b6d7c;">Data tersimpan di GitHub + backup manual</div>
+</div>
+
+<!-- Modal Popup untuk melihat detail -->
+<div id="entryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="Foto">
+            <h3 id="modalMatkul"></h3>
+            <p id="modalTanggal"></p>
+            <p id="modalDeskripsi"></p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript terpisah -->
+<script src="script.js"></script>
+</body>
+</html>

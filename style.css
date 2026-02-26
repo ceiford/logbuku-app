@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fef7e9;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background: #ffffffdf;
+    backdrop-filter: blur(2px);
+    border-radius: 2.5rem;
+    box-shadow: 0 20px 40px rgba(10, 47, 68, 0.15);
+    padding: 2rem 2.2rem 2.8rem;
+    border: 1px solid #e5d7c1;
+}
+h1 {
+    font-size: 2.4rem;
+    font-weight: 650;
+    color: #0a2f44;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+h1 span {
+    background: #0a2f44;
+    color: #fef1d6;
+    font-size: 1rem;
+    padding: 0.2rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 400;
+}
+.header-today {
+    background: #f5e6d4;
+    border-radius: 50px;
+    padding: 1.2rem 2rem;
+    margin: 1.2rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid #dcc9b0;
+    box-shadow: inset 0 1px 4px #fff9ed;
+}
+.date-large {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #0a2f44;
+    background: #fffcf3;
+    padding: 0.3rem 1.5rem;
+    border-radius: 40px;
+    border: 1px solid #b9a78f;
+}
+.day-large {
+    font-size: 1.3rem;
+    background: #0a2f44;
+    color: #fef3dd;
+    padding: 0.3rem 1.5rem;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.quote-of-day {
+    font-style: italic;
+    color: #3b4f5e;
+    background: rgba(255, 250, 235, 0.8);
+    padding: 0.3rem 1.8rem;
+    border-radius: 40px;
+    font-size: 1.15rem;
+    border-left: 4px solid #0a2f44;
+    flex: 1 1 auto;
+    text-align: center;
+}
+.clock {
+    background: #0a2f44;
+    color: #fef3dd;
+    padding: 0.3rem 1.5rem;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+.form-section {
+    background: #fffbf2;
+    border-radius: 2rem;
+    padding: 2rem;
+    border: 1px solid #e2d2bb;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 0 #dac8ae;
+}
+.form-section h3 {
+    color: #0a2f44;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 1.8rem;
+}
+.form-group {
+    margin-bottom: 0.8rem;
+}
+.form-group.full-width {
+    grid-column: span 2;
+}
+label {
+    font-weight: 600;
+    color: #0a2f44;
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+input, select {
+    background: white;
+    padding: 0.85rem 1.3rem;
+    border: 1px solid #cbb89e;
+    border-radius: 60px;
+    width: 100%;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.15s;
+}
+input:focus, select:focus {
+    border-color: #0a2f44;
+    box-shadow: 0 0 0 3px rgba(10,47,68,0.15);
+}
+input[type="file"] {
+    padding: 0.6rem 1rem;
+    background: #fef7e9;
+}
+.btn {
+    background: #0a2f44;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.9rem 2.4rem;
+    border-radius: 60px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #0a2f44;
+    box-shadow: 0 4px 0 #05212e;
+}
+.btn:hover {
+    background: #154b66;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #05212e;
+}
+.btn-secondary {
+    background: #f5e6d4;
+    color: #0a2f44;
+    border: 1px solid #b9a78f;
+    box-shadow: 0 3px 0 #b9a78f;
+}
+.btn-secondary:hover {
+    background: #fcf0e0;
+    color: #0a2f44;
+}
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.8rem 0 1.5rem;
+}
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #f5e6d4;
+    padding: 0.4rem 1.2rem 0.4rem 1.8rem;
+    border-radius: 60px;
+    border: 1px solid #dac29e;
+}
+.filter-group label {
+    margin-bottom: 0;
+    color: #0a2f44;
+    font-weight: 600;
+}
+.filter-group select {
+    width: 200px;
+    background: white;
+    border-radius: 40px;
+}
+.entries-title h2 {
+    font-size: 1.9rem;
+    color: #0a2f44;
+    font-weight: 450;
+}
+.log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.entry-card {
+    background: #fffcf5;
+    border-radius: 28px;
+    border: 1px solid #dbcbb4;
+    padding: 1.3rem 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 6px 0 #d2bea3;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.entry-card:hover {
+    background: #fff9ed;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #d2bea3;
+}
+.entry-thumb {
+    flex: 0 0 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: #efe1cf;
+    overflow: hidden;
+    border: 2px solid #bba88c;
+}
+.entry-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.entry-info {
+    flex: 2;
+    min-width: 250px;
+    pointer-events: none;
+}
+.entry-mata-kuliah {
+    background: #0a2f44;
+    color: #fef3dd;
+    padding: 0.3rem 1.4rem;
+    border-radius: 40px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.3rem;
+    border: 1px solid #153e55;
+}
+.entry-date-badge {
+    background: #e8d7c0;
+    color: #2f4454;
+    padding: 0.2rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 0.5rem;
+    border: 1px solid #b9a78f;
+}
+.entry-catatan {
+    background: #f5e6d4;
+    padding: 0.7rem 1.4rem;
+    border-radius: 30px;
+    color: #1d2c3a;
+    font-size: 1rem;
+    border: 1px solid #dac4a8;
+    word-break: break-word;
+    margin-top: 0.5rem;
+}
+.delete-btn {
+    background: none;
+    border: 1.5px solid #b48c6c;
+    color: #7a4d2e;
+    font-size: 0.8rem;
+    padding: 0.4rem 1.4rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: auto;
+    transition: 0.1s;
+    pointer-events: auto;
+}
+.delete-btn:hover {
+    background: #f3dbcb;
+    border-color: #a56942;
+    color: #4f2f1b;
+}
+.empty-message {
+    background: #f5e6d4;
+    border-radius: 80px;
+    padding: 2.2rem;
+    text-align: center;
+    color: #3a4f5e;
+    font-size: 1.3rem;
+    border: 2px dashed #bba78b;
+}
+.footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.backup-section {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+hr {
+    border: none;
+    border-top: 2px solid #ecdbba;
+    margin: 2rem 0 1rem;
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+.modal-content {
+    background-color: #fffcf5;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid #dbcbb4;
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+.close:hover {
+    color: #0a2f44;
+}
+.modal-body {
+    text-align: center;
+    margin-top: 10px;
+}
+.modal-body img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #bba88c;
+}
+.modal-body h3 {
+    color: #0a2f44;
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+}
+.modal-body p {
+    color: #2f4454;
+    margin: 5px 0;
+    font-size: 1rem;
+}
