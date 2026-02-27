@@ -1,5 +1,5 @@
 // ==================== KONFIGURASI GITHUB ====================
-const GITHUB_TOKEN = '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';        // GANTI dengan token Anda
+const GITHUB_TOKEN = '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';        // GANTI dengan token Anda
 const GITHUB_OWNER = 'ceiford';    // GANTI
 const GITHUB_REPO  = 'logbuku-app';     // GANTI
 const GITHUB_PATH  = 'data/logbook.json';        // path file JSON di repositori
